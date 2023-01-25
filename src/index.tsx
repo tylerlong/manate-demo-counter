@@ -1,28 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'todomvc-app-css/index.css';
-import {autoRun} from '@tylerlong/use-proxy';
-import _ from 'lodash';
 
-import store, {Todo} from './store';
-import {App} from './components';
+import {useProxy} from '@tylerlong/use-proxy';
+import {Component} from '@tylerlong/use-proxy/build/react';
 
-const storageKey = 'todomvc-useProxy-todos';
-
-const data = global.localStorage.getItem(storageKey);
-if (data) {
-  const json = JSON.parse(data);
-  store.visibility = json.visibility ?? 'all';
-  store.todos = (json.todos || []).map(
-    (todo: Todo) => new Todo(todo.title, todo.completed)
-  );
+class Store {
+  count = 0;
+  increase() {
+    this.count += 1;
+  }
 }
-const autoRunner = autoRun(
-  store,
-  () => global.localStorage.setItem(storageKey, JSON.stringify(store)),
-  func => _.debounce(func, 100, {leading: true, trailing: true})
-);
-autoRunner.start();
+const store = useProxy(new Store());
+
+class App extends Component<{store: Store}> {
+  render() {
+    const store = this.props.store;
+    return (
+      <div>
+        <span>{store.count}</span>
+        <button onClick={() => store.increase()}>+</button>
+      </div>
+    );
+  }
+}
 
 const container = document.createElement('div');
 document.body.appendChild(container);

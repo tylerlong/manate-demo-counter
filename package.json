@@ -1,5 +1,5 @@
 {
-  "name": "use-proxy-demo-todomvc",
+  "name": "use-proxy-demo-counter",
   "description": "React & useProxy TodoMVC Example",
   "version": "4.0.0",
   "license": "MIT",
@@ -9,8 +9,7 @@
   },
   "scripts": {
     "serve": "webpack serve --progress --open",
-    "release": "webpack --progress --config webpack.config.prod.ts",
-    "test": "jest -w 1"
+    "release": "webpack --progress --config webpack.config.prod.ts"
   },
   "dependencies": {
     "@tylerlong/use-proxy": "^0.7.0",
@@ -34,8 +33,6 @@
     "css-loader": "^6.2.0",
     "gts": "^3.1.0",
     "html-webpack-plugin": "^5.3.2",
-    "jest": "^27.1.1",
-    "react-test-renderer": "^17.0.2",
     "style-loader": "^3.2.1",
     "ts-loader": "^9.2.5",
     "ts-node": "^10.2.1",
@@ -44,10 +41,5 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.0",
     "yarn-upgrade-all": "^0.5.4"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./test/setup.js"
-    ]
   }
 }

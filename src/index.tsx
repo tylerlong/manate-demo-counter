@@ -9,6 +9,9 @@ class Store {
   increase() {
     this.count += 1;
   }
+  decrease() {
+    this.count -= 1;
+  }
 }
 const store = useProxy(new Store());
 
@@ -17,6 +20,7 @@ class App extends Component<{store: Store}> {
     const store = this.props.store;
     return (
       <div>
+        <button onClick={() => store.decrease()}>-</button>
         <span>{store.count}</span>
         <button onClick={() => store.increase()}>+</button>
       </div>

@@ -23,7 +23,7 @@ const config: Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'useProxy • TodoMVC',
+      title: 'useProxy • Counter',
     }),
     new HotModuleReplacementPlugin(),
   ],

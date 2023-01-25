@@ -5,7 +5,7 @@ import {useProxy} from '@tylerlong/use-proxy';
 import {Component} from '@tylerlong/use-proxy/build/react';
 
 class Store {
-  count = 0;
+  count = 10;
   increase() {
     this.count += 1;
   }

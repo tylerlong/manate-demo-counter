@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": "true",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "scripts": {
     "serve": "webpack serve --progress --open",
@@ -13,20 +13,11 @@
   },
   "dependencies": {
     "@tylerlong/use-proxy": "^0.7.0",
-    "class-transformer": "^0.4.0",
-    "classnames": "^2.3.1",
-    "hyperid": "^2.3.1",
-    "lodash": "^4.17.21",
-    "pluralize": "^8.0.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "rxjs": "^7.3.0",
-    "todomvc-app-css": "^2.4.1"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.172",
     "@types/node": "^16.9.1",
-    "@types/pluralize": "^0.0.29",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
     "buffer": "^6.0.3",

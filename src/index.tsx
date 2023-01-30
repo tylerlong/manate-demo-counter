@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import {useProxy} from '@tylerlong/use-proxy';
 import {Component} from '@tylerlong/use-proxy/build/react';
 
+import {Button} from 'antd-mobile';
+
 class Store {
   count = 10;
   increase() {
@@ -20,9 +22,13 @@ class App extends Component<{store: Store}> {
     const store = this.props.store;
     return (
       <div>
-        <button onClick={() => store.decrease()}>-</button>
+        <Button color="primary" fill="outline" onClick={() => store.decrease()}>
+          -
+        </Button>
         <span>{store.count}</span>
-        <button onClick={() => store.increase()}>+</button>
+        <Button color="primary" fill="outline" onClick={() => store.increase()}>
+          +
+        </Button>
       </div>
     );
   }

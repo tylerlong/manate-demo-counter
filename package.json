@@ -8,11 +8,12 @@
     "node": ">=16"
   },
   "scripts": {
-    "serve": "webpack serve --progress --open",
+    "serve": "webpack serve --progress",
     "release": "webpack --progress --config webpack.config.prod.ts"
   },
   "dependencies": {
     "@tylerlong/use-proxy": "^1.1.0",
+    "antd-mobile": "^5.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

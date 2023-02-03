@@ -21,15 +21,15 @@ class App extends Component<{store: Store}> {
   render() {
     const store = this.props.store;
     return (
-      <div>
+      <>
         <Button color="primary" fill="outline" onClick={() => store.decrease()}>
           -
         </Button>
-        <span>{store.count}</span>
+        {store.count}
         <Button color="primary" fill="outline" onClick={() => store.increase()}>
           +
         </Button>
-      </div>
+      </>
     );
   }
 }

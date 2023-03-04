@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {useProxy} from '@tylerlong/use-proxy';
-import {Component} from '@tylerlong/use-proxy/build/react';
+import {$} from '@tylerlong/use-proxy/build/react';
+// import {Component} from '@tylerlong/use-proxy/build/react';
 
 import {Button} from 'antd-mobile';
 
@@ -17,22 +18,37 @@ class Store {
 }
 const store = useProxy(new Store());
 
-class App extends Component<{store: Store}> {
-  render() {
-    const store = this.props.store;
-    return (
-      <>
-        <Button color="primary" fill="outline" onClick={() => store.decrease()}>
-          -
-        </Button>
-        {store.count}
-        <Button color="primary" fill="outline" onClick={() => store.increase()}>
-          +
-        </Button>
-      </>
-    );
-  }
-}
+const App = $((props: {store: Store}) => {
+  const store = props.store;
+  return (
+    <>
+      <Button color="primary" fill="outline" onClick={() => store.decrease()}>
+        -
+      </Button>
+      {store.count}
+      <Button color="primary" fill="outline" onClick={() => store.increase()}>
+        +
+      </Button>
+    </>
+  );
+});
+
+// class App extends Component<{store: Store}> {
+//   render() {
+//     const store = this.props.store;
+//     return (
+//       <>
+//         <Button color="primary" fill="outline" onClick={() => store.decrease()}>
+//           -
+//         </Button>
+//         {store.count}
+//         <Button color="primary" fill="outline" onClick={() => store.increase()}>
+//           +
+//         </Button>
+//       </>
+//     );
+//   }
+// }
 
 const container = document.createElement('div');
 document.body.appendChild(container);

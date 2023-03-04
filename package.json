@@ -1,37 +1,37 @@
 {
+  "license": "MIT",
+  "version": "4.0.0",
+  "scripts": {
+    "test": "ts-node src/index.ts",
+    "serve": "parcel src/index.html --dist-dir build",
+    "release": "parcel build src/index.html --dist-dir docs --public-url ."
+  },
   "name": "use-proxy-demo-counter",
   "description": "React & useProxy TodoMVC Example",
-  "version": "4.0.0",
-  "license": "MIT",
   "private": "true",
-  "engines": {
-    "node": ">=16"
-  },
-  "scripts": {
-    "serve": "webpack serve --progress",
-    "release": "webpack --progress --config webpack.config.prod.ts"
-  },
   "dependencies": {
     "@tylerlong/use-proxy": "^1.1.0",
-    "antd-mobile": "^5.28.0",
+    "antd-mobile": "^5.28.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "buffer": "^6.0.3",
-    "css-loader": "^6.7.3",
-    "gts": "^3.1.1",
-    "html-webpack-plugin": "^5.5.0",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.4.2",
-    "ts-node": "^10.9.1",
+    "eslint": "^8.35.0",
+    "eslint-config-alloy": "^4.9.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "events": "^3.1.0",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.4",
+    "process": "^0.11.10",
+    "ttpt": "^0.1.4",
     "typescript": "^4.9.5",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1",
     "yarn-upgrade-all": "^0.7.2"
   }
 }

@@ -10,6 +10,24 @@ A demo Counter project powered by [useProxy](https://github.com/tylerlong/use-pr
 ### [Live demo](https://chuntaoliu.com/use-proxy-demo-counter/)
 
 
+## Setup
+
+```
+yarn install
+```
+
+## Serve
+
+```
+yarn serve
+```
+
+## Release
+
+```
+yarn release
+```
+
 ## Credit
 
 This application was created by [Tyler Liu](https://github.com/tylerlong).

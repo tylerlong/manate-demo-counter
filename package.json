@@ -1,8 +1,8 @@
 {
-  "name": "use-proxy-demo-counter",
+  "name": "manate-demo-counter",
   "version": "4.0.0",
   "private": "true",
-  "description": "React & useProxy TodoMVC Example",
+  "description": "React & manate TodoMVC Example",
   "license": "MIT",
   "scripts": {
     "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
@@ -16,7 +16,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@tylerlong/use-proxy": "^1.3.1",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",

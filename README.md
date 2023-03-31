@@ -1,14 +1,8 @@
-# React & useProxy Counter Example
+# React & manate Counter Example
 
-A demo Counter project powered by [useProxy](https://github.com/tylerlong/use-proxy).
+A demo Counter project powered by [manate](https://github.com/tylerlong/manate).
 
-[useProxy](https://github.com/tylerlong/use-proxy) is the counterpart of [useState](https://reactjs.org/docs/hooks-intro.html).
-
-`useProxy` allows you to manage your state in OOP style.
-
-
-### [Live demo](https://chuntaoliu.com/use-proxy-demo-counter/)
-
+### [Live demo](https://chuntaoliu.com/manate-demo-counter/)
 
 ## Setup
 

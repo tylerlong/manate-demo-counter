@@ -1,56 +1,39 @@
 import React from 'react';
-import {createRoot} from 'react-dom/client';
-
-import {useProxy} from '@tylerlong/use-proxy';
-import {$} from '@tylerlong/use-proxy/build/react';
-// import {Component} from '@tylerlong/use-proxy/build/react';
-
-import {Button} from 'antd-mobile';
+import { createRoot } from 'react-dom/client';
+import { manage } from 'manate';
+import { auto } from 'manate/react';
+import { Button } from 'antd-mobile';
 
 class Store {
-  count = 10;
-  increase() {
+  public count = 10;
+  public increase() {
     this.count += 1;
   }
-  decrease() {
+  public decrease() {
     this.count -= 1;
   }
 }
-const store = useProxy(new Store());
+const store = manage(new Store());
 
-const App = $((props: {store: Store}) => {
-  const store = props.store;
-  return (
-    <>
-      <Button color="primary" fill="outline" onClick={() => store.decrease()}>
-        -
-      </Button>
-      {store.count}
-      <Button color="primary" fill="outline" onClick={() => store.increase()}>
-        +
-      </Button>
-    </>
-  );
-});
-
-// class App extends Component<{store: Store}> {
-//   render() {
-//     const store = this.props.store;
-//     return (
-//       <>
-//         <Button color="primary" fill="outline" onClick={() => store.decrease()}>
-//           -
-//         </Button>
-//         {store.count}
-//         <Button color="primary" fill="outline" onClick={() => store.increase()}>
-//           +
-//         </Button>
-//       </>
-//     );
-//   }
-// }
+const App = (props: { store: Store }) => {
+  const render = () => {
+    const store = props.store;
+    return (
+      <>
+        <Button color="primary" fill="outline" onClick={() => store.decrease()}>
+          -
+        </Button>
+        {store.count}
+        <Button color="primary" fill="outline" onClick={() => store.increase()}>
+          +
+        </Button>
+      </>
+    );
+  };
+  return auto(render, props);
+};
 
 const container = document.createElement('div');
 document.body.appendChild(container);
-const root = createRoot(container)
+const root = createRoot(container);
 root.render(<App store={store} />);

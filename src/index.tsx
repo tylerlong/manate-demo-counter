@@ -1,7 +1,8 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { manage } from 'manate';
-import { auto /* , Component */ } from 'manate/react';
+import { auto } from 'manate/react';
+// import { Component } from 'manate/react';
 import { Button } from 'antd-mobile';
 
 class Store {

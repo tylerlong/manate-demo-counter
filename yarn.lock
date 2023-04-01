@@ -2275,10 +2275,10 @@ make-error@^1.1.1:
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
-manate@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.npmjs.org/manate/-/manate-0.3.3.tgz#f06db1a7fccdc3e3f8b8e686e4e0d913f6d912d3"
-  integrity sha512-w/+HsFUiDptqwx8dszL0AekazCjQ1nX7SPEDIXXYgxMlLd8lWh+yIH426v1URN/L6MYxUdFsjXxZ0Wp/2VLyyQ==
+manate@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.npmjs.org/manate/-/manate-0.3.5.tgz#1445a849963a2b3a7472770ef0e9ef1fe2be1527"
+  integrity sha512-fpkUID0k88VI+GAt/UxkhElb9v4Z8PDYvnAZWBM6oc7TSBCfCYHzhOg/uIMnigzHFYDNAahJLpJ5bMgTx8WR2Q==
 
 mdn-data@2.0.14:
   version "2.0.14"

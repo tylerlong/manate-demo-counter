@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "antd-mobile": "^5.28.2",
-    "manate": "^0.2.1",
+    "manate": "^0.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -33,7 +33,7 @@
     "process": "^0.11.10",
     "sort-package-json": "^2.4.1",
     "ts-node": "^10.9.1",
-    "ttpt": "^0.5.3",
+    "ttpt": "^0.5.4",
     "typescript": "^5.0.3",
     "yarn-upgrade-all": "^0.7.2"
   }

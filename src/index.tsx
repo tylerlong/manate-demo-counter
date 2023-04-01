@@ -1,7 +1,7 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { manage } from 'manate';
-import { auto } from 'manate/react';
+import { auto /* , Component */ } from 'manate/react';
 import { Button } from 'antd-mobile';
 
 class Store {
@@ -15,6 +15,7 @@ class Store {
 }
 const store = manage(new Store());
 
+// functional component
 const App = (props: { store: Store }) => {
   const render = () => {
     const store = props.store;
@@ -32,6 +33,24 @@ const App = (props: { store: Store }) => {
   };
   return auto(render, props);
 };
+
+// // class component
+// class App extends Component<{ store: Store }> {
+//   public render() {
+//     const store = this.props.store;
+//     return (
+//       <>
+//         <Button color="primary" fill="outline" onClick={() => store.decrease()}>
+//           -
+//         </Button>
+//         {store.count}
+//         <Button color="primary" fill="outline" onClick={() => store.increase()}>
+//           +
+//         </Button>
+//       </>
+//     );
+//   }
+// }
 
 const container = document.createElement('div');
 document.body.appendChild(container);
